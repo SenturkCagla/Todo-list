@@ -1,0 +1,149 @@
+@keyframes example {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container {
+  margin-left: 115px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.add_box {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: #9929EA;
+  cursor: pointer;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_box button {
+  width: 100%;
+  height: 100%;
+  background-color: #9929EA;
+  color: #FAEB92;
+  border: none;
+  border-radius: 10%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.task_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: #9929EA;
+  cursor: pointer;
+  border-radius: 10%;
+  animation-name: example;
+  animation-duration: 1.5s;
+  color: #FAEB92;
+}
+
+
+.popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup_content {
+  background: #9929EA;
+  padding: 20px;
+  border-radius: 10px;
+  width: 700px;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+
+.popup_content input {
+  width: 80%;
+  padding: 8px 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: none;
+  background-color: #000000;
+  font-size: 1rem;
+  color: #FAEB92;
+  border-color: #000000;
+}
+
+.popup_content button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #000000;
+  color: #FAEB92;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task_box.completed {
+  background-color: #cc66da5d;
+  color: #FAEB92;
+}
+
+.delete_btn {
+  background-color: #000000;
+  color: #FAEB92;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.complete_btn {
+  background-color: #000000;
+  color: #FAEB92;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.save_btn {
+  background-color: #000000;
+  color: #FAEB92;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-210px);
+  }
+  100% {
+    transform: translateX(0px);
+    
+  }
+  
+}
+
+.add_box.animate {
+  animation: slideRight 1s ease-in-out;
+}
